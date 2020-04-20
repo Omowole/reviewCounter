@@ -31,10 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         var added = 0
 
-       add.setOnClickListener {
-           added++
-           cot.text = added.toString()
-       }
+        add.setOnClickListener {
+            added++
+            cot.text = added.toString()
+        }
         reset.setOnClickListener {
             added=0
             cot.text = added.toString()
@@ -82,10 +82,14 @@ class MainActivity : AppCompatActivity() {
         val adRequest = AdRequest.Builder().build()
         mAdView.loadAd(adRequest)
 
-        val adView = AdView(this (getString(R.string.adView)))
-        adView.adSize = AdSize.SMART_BANNER
-        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+        /**
+         *  You have to fix below issue
+         */
 
+        // AdView(resources.getString(R.string.adView))
+//        val adView = AdView(this (getString(R.string.adView)))
+//        adView.adSize = AdSize.SMART_BANNER
+//        adView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
 
     }
 
@@ -94,5 +98,3 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
-
-
